@@ -1,0 +1,80 @@
+/******************/
+/*   variables /  */
+/* color scheming */
+/******************/
+:root {
+  --pink: hotpink;
+  --pink-hover: deeppink;
+  --green-main: #5BBD86;
+  --blue-main: #666CB8;
+  --orange-main: #FF977B;
+  --yellow-main: #FFDC7B;
+  --white: #fff8e7;
+  --background: rgb(19, 19, 19);
+}
+
+/**************/
+/* resets lol */
+/**************/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff8e7;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  cursor: default;
+}
+
+flex-container {
+  display: flex;
+}
+
+/*
+        _____
+    ,-:` \;',`'-, 
+  .'-;_,;  ':-;_,'.
+ /;   '/    ,  _`.-\
+| '`. (`     /` ` \`|
+|:.  `\`-.   \_   / |
+|     (   `,  .`\ ;'|
+ \     | .'     `-'/
+  `.   ;/        .'
+    `'-._____. `
+*/
+
+/****************/
+/* global stuff */
+/****************/
+
+body {
+  background-color: var(--background);
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: var(--pink);
+}
+grid-body {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+  gap: .69em .69em;
+}
+flex-container {
+  display: flex;
+  background-color: var(--yellow-main);
+  align-items: center;
+  justify-content: space-between;
+  padding: .42em;
+}
+flex-container h1 {
+  color: var(--blue-main);
+}
+flex-container p {
+  color: var(--blue-main);
+}
+
+/****************/
+/* custom stuff */
+/****************/
+
