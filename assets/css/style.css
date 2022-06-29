@@ -60,21 +60,62 @@ grid-body {
   grid-template: repeat(4, 1fr) / repeat(5, 1fr);
   gap: .69em .69em;
 }
-flex-container {
-  display: flex;
-  background-color: var(--yellow-main);
-  align-items: center;
-  justify-content: space-between;
-  padding: .42em;
-}
-flex-container h1 {
-  color: var(--blue-main);
-}
-flex-container p {
-  color: var(--blue-main);
-}
 
 /****************/
 /* custom stuff */
 /****************/
 
+.topBar {
+  background-color: var(--yellow-main);
+  align-items: center;
+  justify-content: space-between;
+  padding: .42em;
+}
+.topBar h1 {
+  color: var(--blue-main);
+}
+.topBar p {
+  color: var(--blue-main);
+}
+
+.article {
+  margin-top: 5rem;
+  align-items: center;
+  flex-direction: column;
+}
+.article #titleBox {
+  text-align: center;
+}
+.article #buttons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.article #buttons a {
+  background-color: var(--blue-main);
+  color: #FFDC7B;
+  border-radius: 15%;
+  padding: .69rem;
+  margin: .69rem;
+}
+.article #buttons a:hover {
+  cursor: grab;
+}
+
+/* i don't understand why this no work */
+/* #buttons {
+  display: flex;
+  justify-content: space-between;
+} */
+
+
+
+
+@media screen and (max-width: 750px) {
+  flex-container {
+    justify-content: center;
+  }  
+  flex-container p {
+    display: none;
+  }
+}
