@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- html compatibility thangs -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- linking to css sheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>coding quiz</title>
 </head>
 <body>
-  <flex-container class="topBar" invisible-cloak="false">
-    <h1>the final coding quiz</h1>
-    <p>test your ability</p>
+  <!-- main header flexbox -->
+  <flex-container class="topBar">
+    <h1 invisible-cloak="false" class="topBarTitle">the final coding quiz</h1>
+    <p invisible-cloak="false" class="topBarP">test your ability</p>
+    <h1 invisible-cloak="true" id="homeButton" role="button">home</h1>
+    <!-- hidden timer counter -->
+    <p id="timeLeft" invisible-cloak="true"></p>
   </flex-container>
 
-  <flex-container class="article" invisible-cloak="false">
+  <!-- first title screen -->
+  <flex-container class="titleScreen" invisible-cloak="false">
+    <!-- title words! -->
     <div id="titleBox">
       <h1>welcom 2 quiz</h1>
       <h2>this is a zuiq for the earthlings</h2>
     </div>
+    <!-- button box! -->
     <div id="buttons">
-      <a href="#" id="startButton" role="button">play</a>
-      <a href="#" id="highscoreButton" role="button">highscore</a>
-    </div>
-    <div>
-      <p>test time left:</p>
-      <p id="timeLeft"></p>
+      <a id="startButton" role="button">play</a>
+      <a id="highscoreButton" role="button">highscore</a>
     </div>
   </flex-container>
 
+  <!-- main question title screen -->
   <question-box invisible-cloak="true">
-    <article>
+    <div class="questionTitle">
+    </div>
+    <article class="answerBox">
+      <p id="answer0" role="button"></p>
+      <p id="answer1" role="button"></p>
+      <p id="answer2" role="button"></p>
+      <p id="answer3" role="button"></p>
       
     </article>
   </question-box>
+
+  <!-- highscore screen with the highscores -->
+  <highscore-box invisible-cloak="true">
+
+  </highscore-box>
 
 
 
@@ -42,7 +59,7 @@
     </details>
   </grid-body> -->
 
-
+  <!-- linking to js file -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>
