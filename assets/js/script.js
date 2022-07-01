@@ -167,7 +167,25 @@ function homeButtonFunc() {
   phoneHome();
 }
 
+/* test answer function */
+function testAnswerFunc(event) {
+  let id = event.target.getAttribute(`id`); // grabs button id
+  id = id.replace(/[^0-9 ]/g, ''); // renames so I just have the index
+  if (questionNum >= questions.length - 1) {
+    endGame();
+  } else {
+    if (id == questions[0].rightAnswer) {
+      timeLeftNum += 5;
+    } else {
+      timeLeftNum -= 10;
+    }
+    questionNum++;
+    insertQuestionData();
+  }
+}
+
 /* test answer functions */
+/* 
 function testAnswerFunc0() {
   if (questionNum >= questions.length - 1) {
     endGame();
@@ -220,6 +238,8 @@ function testAnswerFunc3() {
     insertQuestionData();
   }
 }
+ */
+
 
 /* ends life as we know it */
 function endGame() {
@@ -257,7 +277,7 @@ highscoreButtonEl.addEventListener(`click`, highscoreButtonFunc);
 homeButtonEl.addEventListener(`click`, homeButtonFunc);
 
 /* button clicks for answer testing */
-answer0.addEventListener(`click`, testAnswerFunc0);
-answer1.addEventListener(`click`, testAnswerFunc1);
-answer2.addEventListener(`click`, testAnswerFunc2);
-answer3.addEventListener(`click`, testAnswerFunc3);
+answer0.addEventListener(`click`, testAnswerFunc);
+answer1.addEventListener(`click`, testAnswerFunc);
+answer2.addEventListener(`click`, testAnswerFunc);
+answer3.addEventListener(`click`, testAnswerFunc);
