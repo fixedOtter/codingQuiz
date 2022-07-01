@@ -127,7 +127,7 @@ question-box .answerBox p:hover {
   cursor: grab;
 }
 
-
+/* highscore box styling */
 highscore-box {
   display: flex;
   margin-top: 5rem;
@@ -137,11 +137,6 @@ highscore-box {
 highscore-box h1 {
   margin-bottom: 2rem;
 }
-highscore-box h2 {
-
-}
-
-
 
 
 
